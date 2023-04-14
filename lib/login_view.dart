@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home.dart';
+
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
 
@@ -50,7 +52,10 @@ class _LoginState extends State<Login> {
                 minimumSize: const Size(100, 50)
               ),
               onPressed: () {
-
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Home()),
+                );
               },
               child: const Text('Log In',
                 style: TextStyle(fontSize: 18),
